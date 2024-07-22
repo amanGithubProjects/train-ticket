@@ -1,0 +1,61 @@
+<div class="container-fluid bg-secondary p-4">
+    <div class="row">
+       <div class="col-4 px-4">
+           <select class="form-select">
+               <option value="">Pune</option>
+           </select>
+       </div>
+       <div class="col-4 px-4">
+           <select class="form-select">
+               <option value=""> Nagpur </option>
+           </select>
+       </div>
+       <div class="col-2 px-2">
+           <input type="text" class="form-control" value="12-12-2023" /> 
+       </div>
+       <div class="col-2 text-end">
+           <button type="button" class="btn btn-primary btn-sm">Modify Search</button>
+       </div>
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid pt-2">
+    <p style="border: 1px solid;padding: 5px;margin-top: 5px;"><strong>4</strong> Result Found For <strong>Pune</strong>  to <strong>Nagpur</strong> on 12-12-2023</p>
+    <div class="row bg-primary" >
+        llllll
+
+       
+          
+        
+        
+        @for(item of trainList; track $index){
+
+            <div class="col-6 mt-2">qqqq
+                <div class="card">aaaa
+                    <div class="card-header bg-secondary text-white">
+                        {{item.trainName}} ({{item.trainNo}})
+                    </div>
+                    <div class="card-body">
+                        <div class="row pb-2">
+                            <div class="col-5">
+                                {{item.departureTime}} | {{item.departureStationName}} | {{item.departureDate | date:'dd/MMM/yy'}}
+                            </div>
+                            <div class="col-2">
+                              15:05 hrs  
+                            </div>
+                            <div class="col-5 text-end">
+                                {{item.arrivalTime}} | {{item.arrivalStationName}} | {{item.arrivalTime | date:'dd/MMM/yy'}}
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">Book Now</button>
+                        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#myModal">Check Availability</button>
+                    </div>
+                </div>
+            </div>
+        }
+        
+    </div> 
+</div>
