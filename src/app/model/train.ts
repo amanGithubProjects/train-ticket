@@ -31,3 +31,37 @@ export interface InterfTrain{
   departureDate: string;
   bookedSeats: number;
 }
+
+export class Customer {
+    passengerID: number;
+    firstName: string;
+    lastName: string;
+    email: string;
+    phone: string;
+    password: string;
+
+    constructor(){
+        this.passengerID = 0;
+        this.firstName = '';
+        this.lastName = '';
+        this.email = '';
+        this.phone = '';
+        this.password = ''
+    }
+  } 
+
+  export interface APIresponse{
+    message: string,
+    result: boolean,
+    data: any
+  }
+
+export class Login{
+  phone : string;
+  password: string;
+
+  constructor(){
+    this.phone = '';
+    this.password = ''; 
+  }
+}

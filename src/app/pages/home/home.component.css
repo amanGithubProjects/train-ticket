@@ -1,0 +1,6 @@
+.container-fluid{
+    /* Add the blur effect */
+  /* filter: blur(0);
+  -webkit-filter: blur(0); */
+  background: var(--radial-gradient-bg);
+}

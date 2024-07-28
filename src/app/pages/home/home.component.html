@@ -1,4 +1,4 @@
-<div class="container ">
+<div class="container-fluid">
     <div class="row d-flex justify-content-center align-items-center">
         <div class="col-lg-12 col-xl-11">
             <div class=" text-black"  >
@@ -9,7 +9,7 @@
                             <form class="mx-1 mx-md-4 pt-5"> 
                                 <div class="row">
                                     <div class="col-6">
-                                        <label class="form-label" for="form3Example1c">From Station</label>
+                                        <label class="form-label" for="form3Example1c"><strong>Station</strong> </label>
                                         <select [(ngModel)]="fromStationId" name="fromStationId" id="" class="form-select">
                                             <option value="0">From Station</option>
                                            @for (item of stationList; track $index) {
@@ -20,7 +20,7 @@
                                         </select>
                                     </div>
                                     <div class="col-6">
-                                        <label class="form-label" for="form3Example1c">To Station</label>
+                                        <label class="form-label" for="form3Example1c"><strong>TO STATION</strong> </label>
                                         <select [(ngModel)]="toStationId" name="toStationId" id="" class="form-select">
                                             <option value="0">To Station</option>
                                             @for (item of stationList; track $index) {
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="row pt-3">
                                     <div class="col-6">
-                                        <label class="form-label" for="form3Example4c">Date Of Travel</label>
+                                        <label class="form-label" for="form3Example4c"><strong>DATE OF TRAVEL</strong> </label>
                                         <input [(ngModel)]="dateOfTravel" name="dateOfTravel" type="date" id="form3Example4c" class="form-control" /> 
                                     </div>
                                 </div> 
@@ -45,7 +45,7 @@
                         <div class="col-md-10 pt-3 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS23iHeQKZMe4QM_SN3ZoMuaf8QUhpAxmY7sg&s"
-                                class="img-fluid w-100" alt="Sample image">
+                                class="img-fluid w-100 rounded-4" alt="Sample image">
 
                         </div>
                     </div>

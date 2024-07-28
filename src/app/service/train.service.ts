@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { InterfTrain } from '../model/train';
+import { APIresponse, Customer, InterfTrain, Login } from '../model/train';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -18,7 +18,19 @@ export class TrainService {
   }
 
   getTrainSearch(from: number, to:number, date:string){
-    return this.http.get(`https://freeapi.miniprojectideas.com/api/TrainApp/GetTrainsBetweenStations?departureStationId=${from}&arrivalStationId=${to}&departureDate=${date}`);
+    return this.http.get(`${this.apiURL}GetTrainsBetweenStations?departureStationId=${from}&arrivalStationId=${to}&departureDate=${date}`);
+  }
+
+  createNewCustomer(obj:Customer){
+    return this.http.post<APIresponse>(`${this.apiURL}AddUpdatePassengers`,obj)
+  }
+
+  loginCustomer(obj:Login){
+    return this.http.post<APIresponse>(`${this.apiURL}login`,obj)
+  }
+
+  bookTrain(obj:any){
+    return this.http.post<APIresponse>(`${this.apiURL}bookTrain`,obj)
   }
 }
 // https://freeapi.miniprojectideas.com/api/TrainApp/GetTrainsBetweenStations?departureStationId=129&arrivalStationId=2&departureDate=2024-07-13

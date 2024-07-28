@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --radial-gradient-bg: radial-gradient(rgba(255, 8, 74), rgb(186, 133, 213));
+}
 .form-control {
     border: 1px solid black !important;
 }
@@ -10,9 +14,28 @@
     border-radius: 20px;
 }
 .navbar {
-    background-color: #1e6a99 !important;
+    
     color: white !important;
+    background: var(--radial-gradient-bg);
 }
+.navbar ul li{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.navbar ul li:hover{
+    transform: scale(1.2);
+    /* color: rgb(163,0,187); */
+    /* color: black !important; */
+}
+.navbar ul li a:hover{
+    color: rgb(62, 1, 34) !important;
+}
+
 .card-body {
-    border: 1px solid gray !important;
+    border: 1px solid rgb(160, 55, 129) !important;
+   
 }
+html{
+    background: var(--radial-gradient-bg);
+}
+
