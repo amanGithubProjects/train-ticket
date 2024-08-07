@@ -9,6 +9,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `npm start` or `ng serve --port 4209` for a dev server. Navigate to `http://localhost:4206/`. The application will automatically reload if you change any of the source files.
 
+## Try to test application
+1)select source as "Pune" and destination as "solapur".
+2) select current date.
+You will get all trains availabe at that date.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
